@@ -6,9 +6,9 @@ const Herobanner = ({bannerData}) => {
   return (
     <div className='hero-banner-container'>
       <div>
-        <p className='beats-solo'>{bannerData.smallText}</p>
-        <h3>{bannerData.midText}</h3>
-        <h1>{bannerData.largeText2}</h1>
+        <p className='beats-solo'>{bannerData.midText}</p>
+        <h3>{bannerData.discount}</h3>
+        <h1>{bannerData.smallText}</h1>
         <img src={urlFor(bannerData.image)} alt='headphones' className='hero-banner-image' />
         
         <div>
@@ -16,8 +16,8 @@ const Herobanner = ({bannerData}) => {
             <button type='button'>{bannerData.buttonText}</button>
           </Link>
           <div className='desc'>
-            <h5>description</h5>
-            <p>{bannerData.saleTime}</p>
+            <h5>Description</h5>
+            <p>{bannerData.desc}</p>
           </div>
         </div>
       </div>

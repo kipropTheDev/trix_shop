@@ -1,6 +1,6 @@
 const Stripe = require('stripe')
 
-const stripe = new Stripe('sk_test_51LH20uBddjFxKwiVs4aOt2oTv4RpiN2sVVmnPrYRwLEWUiptgmYGPqu8kPAmRt8Lz862uCGRYei6052bqqpexDNT00kvkTrZSJ')
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
 
 
 export default async function handler(req, res) {
@@ -37,7 +37,7 @@ export default async function handler(req, res) {
             }
           }),
           success_url: `${req.headers.origin}/success`,
-          cancel_url: `${req.headers.origin}/canceled`,
+          cancel_url: `${req.headers.origin}/`,
         }
   
         // Create Checkout Sessions from body params.
